@@ -2,6 +2,7 @@ main {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-image: url('../images/wall.png');
 }
 
 menu {
@@ -13,12 +14,15 @@ menu {
   background-color: #000;
   color: #fff;
   font-size: 3vw;
+  border-bottom: 3px solid #ffd700;
 }
 
 menu h2:first-child {
   color: red;
 }
-
+menu h2+h2 {
+  margin-top: 10px;
+}
 .panel {
   margin-top: 1rem;
   display: flex;
@@ -39,8 +43,16 @@ menu h2:first-child {
   width: 33vw;
   aspect-ratio: 1/1;
   border: 1px solid #000;
+  background-color: aquamarine;
 }
 
 .enemy {
-  background-color: red;
+  background-image: url('../images/ralph.png');
+  background-size: cover;
+}
+
+.menu-lives {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
