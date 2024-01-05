@@ -4,6 +4,7 @@ const state = {
     enemy: document.querySelector('.enemy'),
     timeLeft: document.querySelector('#time-left'),
     score: document.querySelector('#score'),
+    audio: document.querySelector('audio'),
   },
   values: {
   },
@@ -39,9 +40,15 @@ function addListenerHitbox() {
           state.values.score++;
           state.views.score.textContent = state.values.score;
           state.values.gameVelocity *= 0.9;
+          playAudio();
         }
       });
   });
+}
+
+function playAudio() {
+  state.views.audio.volume = 0.3;
+  state.views.audio.play();
 }
 
 function init() {
